@@ -3,70 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Mahmud Sir - By Suhail Tanweer</title>
+<title>For Mahmud Sir - By Suhail</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#eef3ff;font-family:sans-serif;color:#1c2a4e}
-#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:linear-gradient(180deg,#fff,#eef3ff)}
-#hero h1{font-size:50px;line-height:0.9;cursor:pointer}
-#page2{display:none;max-width:480px;margin:0 auto;padding:20px;background:#eef3ff}
-.card{background:#fff;border-radius:18px;padding:16px;text-align:center;margin:8px;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}
-.bar{background:#a9bce8;color:#fff;padding:14px;text-align:center;border-radius:12px;font-weight:800;margin:15px 0}
-.box{background:#fff;padding:18px;border-radius:16px;margin:12px 0;line-height:1.6;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
-.photo{width:100%;height:300px;border-radius:16px;overflow:hidden;margin-top:14px;background:#fff}
+body{background:#eef3ff;font-family:Inter,sans-serif;color:#1c2a4e}
+.page{display:none;max-width:480px;margin:0 auto;min-height:100vh;padding:24px}
+#hero{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:100vh;background:linear-gradient(180deg,#fff,#eef3ff)}
+#hero h1{font-size:52px;line-height:0.9;cursor:pointer;font-family:serif}
+.btn{padding:14px 30px;border-radius:999px;background:#1c2a4e;color:#fff;border:none;font-weight:800;margin-top:18px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.2)}
+.card{background:#fff;border-radius:18px;padding:16px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.box{background:#fff;padding:20px;border-radius:16px;margin:12px 0;line-height:1.7;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
+.photo{width:100%;height:310px;border-radius:16px;overflow:hidden;margin-top:14px;background:#fff;border:3px solid #fff;box-shadow:0 10px 25px rgba(0,0,0,0.1)}
 .photo img{width:100%;height:100%;object-fit:cover}
-.footer{margin-top:30px;background:#1c2a4e;color:#fff;padding:30px 20px;border-radius:24px 24px 0 0;text-align:center}
+.footer{background:#1c2a4e;color:#fff;padding:30px 20px;border-radius:24px 24px 0 0;text-align:center;margin-top:25px}
+.next-wrap{text-align:center;margin-top:20px}
 </style>
 </head>
 <body>
 
-<div id="hero">
-<p style="letter-spacing:4px;font-size:10px">FROM OUTGOING BATCH CLASS 12</p>
-<h1 onclick="goNext()">Mahmud-Al<br>Hassan<br><span style="font-size:11px;letter-spacing:3px;display:block;margin-top:10px;opacity:0.6">Biosciences & Biochemistry</span></h1>
-<p style="margin-top:15px">tap your name to begin</p>
-<button onclick="goNext()" style="margin-top:20px;padding:12px 28px;border-radius:999px;background:#1c2a4e;color:#fff;border:none;font-weight:bold">CLICK YOUR NAME, SIR ✨</button>
+<!-- 1st PAGE - HERO -->
+<div id="hero" class="page" style="display:flex">
+<p style="letter-spacing:4px;font-size:10px;opacity:0.6">FROM OUTGOING BATCH CLASS XII 2025-26</p>
+<h1 onclick="showPage('page2')">Mahmud-Al<br>Hassan<br><span style="font-size:11px;letter-spacing:3px;display:block;margin-top:10px;opacity:0.6;font-family:sans-serif">Biosciences & Biochemistry | M.Sc. B.Ed</span></h1>
+<p style="margin-top:12px;opacity:0.6">welcome Sir, tap your name ✨</p>
+<button class="btn" onclick="showPage('page2')">CLICK YOUR NAME, SIR ✨</button>
 </div>
 
-<div id="page2">
-<h2 style="text-align:center;font-size:30px">The Man Behind The Name</h2>
+<!-- 2nd PAGE - THE MAN BEHIND THE NAME -->
+<div id="page2" class="page">
+<h2 style="text-align:center;font-size:32px;font-family:serif;line-height:1.1">The Man Behind<br>The Name</h2>
+<p style="text-align:center;opacity:0.6;font-size:12px;margin-top:6px;letter-spacing:2px">WHO IS HE?</p>
 <div class="grid">
-<div class="card">👋<br><b>Xenodochial</b></div>
-<div class="card">🧬<br><b>Biosciences</b></div>
-<div class="card">🎓<br><b>M.Sc. B.Ed</b></div>
-<div class="card">🏛️<br><b>JMI HNB GU KUK</b></div>
+<div class="card">👋<br><b>Xenodochial</b><br><span style="font-size:11px;opacity:0.6">Warm & Welcoming</span></div>
+<div class="card">🧬<br><b>Biosciences</b><br><span style="font-size:11px;opacity:0.6">Biochemistry</span></div>
+<div class="card">🎓<br><b>M.Sc. B.Ed</b><br><span style="font-size:11px;opacity:0.6">Masters</span></div>
+<div class="card">🏛️<br><b>JMI HNB GU KUK</b><br><span style="font-size:11px;opacity:0.6">Alumni</span></div>
+<div class="card">📍<br><b>DELHI ASSAM</b><br><span style="font-size:11px;opacity:0.6">Roots</span></div>
+<div class="card">🌱<br><b>ACACAS Hojai</b><br><span style="font-size:11px;opacity:0.6">Campus</span></div>
 </div>
-<div class="bar">Mahmud-Al Hassan Sir ✨</div>
-<div class="box"><b>A Letter From Us</b><br><br>We knew you as a teacher. But we will remember you as something more. You were Xenodochial before we knew the word. You taught Biosciences, but you taught us life. Thank you, Sir.<br><br><b>Outgoing Batch Class 12</b></div>
-<div class="box"><b>📚 1. KNOWLEDGE BEYOND BOOKS</b><br>You taught us to understand life, not just exams.</div>
-<div class="box"><b>⏰ 2. DISCIPLINE IS SUCCESS</b><br>If you respect time, time will respect you.</div>
-<div class="box"><b>💪 3. YOU BELIEVED IN US</b><br>Your "You can do it" gave us confidence.</div>
+<div style="background:#a9bce8;color:#fff;padding:15px;border-radius:14px;text-align:center;font-weight:900;margin-top:18px">Mahmud-Al Hassan Sir ✨</div>
+<div class="next-wrap"><button class="btn" onclick="showPage('page3')">See Biography →</button></div>
+</div>
 
-<h3 style="text-align:center;margin-top:25px">Our Memories With You 📸</h3>
+<!-- 3rd PAGE - BIOGRAPHY -->
+<div id="page3" class="page">
+<h2 style="text-align:center;font-size:30px;font-family:serif">Sir's Biography</h2>
+<div class="box"><b>A Letter From Us</b><br><br>We knew you as a teacher. But we will remember you as something more.<br><br><b>You were Xenodochial before we knew the word.</b> You welcomed every doubt, every late assignment, every silly question with same smile.<br><br><b>You taught Biosciences, but you taught us life.</b> Your real degree is not M.Sc. B.Ed - it is patience, kindness, and belief.<br><br><b>From JMI to HNB GU to KUK, Delhi to Assam.</b> Your journey taught us that education has no borders.<br><br>Thank you for everything, Sir.<br><br><b>- Outgoing Batch of Class 12, ACACAS Hojai</b></div>
+<div class="next-wrap"><button class="btn" onclick="showPage('page4')">See Memories →</button></div>
+</div>
+
+<!-- 4th PAGE - MEMORIES -->
+<div id="page4" class="page">
+<h2 style="text-align:center;font-size:30px;font-family:serif">Our Memories With You 📸</h2>
+<p style="text-align:center;opacity:0.6;font-size:12px;margin-top:5px">CLICK TO SEE LIFE LESSONS</p>
 <div class="photo"><img src="Screenshot_2026-09-03-20-55-45-88_1c337646f29875672b5a61192b9010f9.jpg"></div>
 <div class="photo"><img src="Screenshot_2026-09-03-20-55-37-56_1c337646f29875672b5a61192b9010f9.jpg"></div>
 <div class="photo"><img src="Screenshot_2026-09-03-20-55-29-95_1c337646f29875672b5a61192b9010f9.jpg"></div>
+<div class="next-wrap"><button class="btn" onclick="showPage('page5')">See 5 Life Lessons →</button></div>
+</div>
+
+<!-- 5th PAGE - 5 LINES + BOTTOM END -->
+<div id="page5" class="page">
+<h2 style="text-align:center;font-size:30px;font-family:serif">5 Lessons You Gave Us</h2>
+<div class="box"><b>📚 1. KNOWLEDGE BEYOND BOOKS</b><br>You taught us to understand life, not just to pass exams.</div>
+<div class="box"><b>⏰ 2. DISCIPLINE IS SUCCESS</b><br>If you respect time, time will respect you - your favourite line.</div>
+<div class="box"><b>💪 3. YOU BELIEVED IN US</b><br>When we doubted ourselves, your "You can do it" gave us confidence.</div>
+<div class="box"><b>😊 4. PATIENCE IS POWER</b><br>Same doubt 10 times, you explained 10 times with same smile.</div>
+<div class="box"><b>🙏 5. BLESSINGS FOR FUTURE</b><br>We are going to college, but we take your blessings and teachings with us.</div>
 
 <div class="footer">
-<h2>Forever Grateful To You, Sir 🙏</h2>
-<p>Happy Teacher's Day - 5th September 2025</p>
-<div style="margin-top:15px;background:rgba(255,255,255,0.15);padding:14px;border-radius:12px">
-🌟 This Site Is Created By 🌟<br>
-<b style="font-size:16px">SUHAIL TANWEER</b><br>
+<h2 style="font-family:serif">Forever Grateful To You, Sir 🙏</h2>
+<p style="margin-top:6px;opacity:0.8">Happy Teacher's Day • 5th September 2025</p>
+<div style="margin-top:16px;background:rgba(255,255,255,0.12);padding:16px;border-radius:14px;border:1px solid rgba(255,255,255,0.2)">
+<span style="font-size:12px;letter-spacing:2px;opacity:0.8">THIS SITE IS CREATED BY</span><br>
+<b style="font-size:18px;display:block;margin-top:4px">SUHAIL TANWEER</b>
 Outgoing Batch • Class XII Science (2025-26)<br>
-ACACAS Hojai, Assam<br><br>
-<span style="font-size:11px;opacity:0.7">Designed with ❤️ for our beloved Sir</span>
+Al-Hira Senior Secondary School, Assam<br><br>
+<span style="font-size:11px;opacity:0.6">Designed with ❤️ for our beloved Sir</span>
 </div>
+<div style="margin-top:18px"><button class="btn" style="background:#fff;color:#1c2a4e" onclick="showPage('hero')">Back to Start ↩</button></div>
 </div>
 </div>
 
 <script>
-function goNext(){
-document.getElementById('hero').style.display='none';
-document.getElementById('page2').style.display='block';
+function showPage(id){
+document.querySelectorAll('.page').forEach(p=>p.style.display='none');
+document.getElementById(id).style.display='block';
+if(id==='hero'){document.getElementById(id).style.display='flex'}
 window.scrollTo(0,0);
 }
 </script>
-
 </body>
 </html>
