@@ -1,37 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Mahmud-Al Hassan Sir - From Suhail Tanweer XII Sci</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<title>For Mahmud Sir - By Suhail Tanweer</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#e8eeff;color:#1c2a4e;font-family:'Inter',sans-serif;overflow-x:hidden;position:relative}
-body::before{content:"";position:fixed;top:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,#c5d8ff 0%, transparent 70%);opacity:0.6;z-index:-1;border-radius:50%}
-body::after{content:"";position:fixed;bottom:-100px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,#ffd6e8 0%, transparent 70%);opacity:0.5;z-index:-1;border-radius:50%}
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px;background:linear-gradient(180deg,#ffffff 0%,#e8eeff 50%, #e0e8ff 100%);position:relative;overflow:hidden}
-.hero::before{content:"✨";position:absolute;top:15%;left:12%;font-size:30px;animation:float 3s infinite}
-.hero::after{content:"🌸";position:absolute;top:20%;right:15%;font-size:28px;animation:float 3.5s infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
-.hero h1{font-family:'Playfair Display',serif;font-size:56px;line-height:0.9;color:#1c2a4e;cursor:pointer;text-shadow:0 4px 20px rgba(0,0,0,0.08)}
-.hero h1 span{display:block;font-size:11px;letter-spacing:4px;margin-top:16px;opacity:0.6;font-family:'Inter';font-weight:700}
-.btn{margin-top:28px;padding:15px 34px;border-radius:999px;background:#1c2a4e;color:#fff;border:none;font-weight:700;cursor:pointer;box-shadow:0 10px 25px rgba(28,42,78,0.25)}
-.page{max-width:480px;margin:0 auto;padding:20px 20px 0 20px;display:none;background:transparent}
-.show{display:block!important}
-.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
-.card{background:rgba(255,255,255,0.9)!important;backdrop-filter:blur(10px);border-radius:22px;padding:20px;text-align:center;box-shadow:0 12px 30px rgba(28,42,78,0.08);border:1px solid rgba(255,255,255,0.8)}
-.ic{width:62px;height:62px;background:linear-gradient(135deg,#e8eeff,#d6e4ff);border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;font-size:28px}
-.name-bar{background:linear-gradient(135deg,#a9bce8,#8fa8e0);color:#fff;padding:18px;border-radius:16px;text-align:center;font-weight:900;font-size:22px;margin-top:20px;box-shadow:0 8px 20px rgba(169,188,232,0.5)}
-.article{background:#ffffff!important;border-radius:24px;padding:24px;margin-top:20px;line-height:1.85;box-shadow:0 12px 30px rgba(0,0,0,0.06);border:1px solid #e6eeff}
-.lesson-card{background:#ffffff!important;border-radius:18px;padding:18px;margin:14px 0;border-left:5px solid #a9bce8;box-shadow:0 8px 20px rgba(0,0,0,.05)}
-.ph{width:100%;height:340px;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 14px 35px rgba(0,0,0,.12);margin-top:18px;border:3px solid #fff}
-.ph img{width:100%;height:100%;object-fit:cover;display:block}
-.footer-main{margin-top:36px;background:linear-gradient(135deg,#1c2a4e,#2a3f6e)!important;border-radius:28px 28px 0 0;padding:32px 24px;text-align:center;color:#fff;box-shadow:0 -10px 40px rgba(0,0,0,0.15)}
-.credit-box{margin-top:18px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);padding:14px;border-radius:14px;font-size:13px;line-height:1.5}
+body{background:#eef3ff;font-family:sans-serif;color:#1c2a4e}
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:linear-gradient(180deg,#fff,#eef3ff)}
+#hero h1{font-size:50px;line-height:0.9;cursor:pointer}
+#page2{display:none;max-width:480px;margin:0 auto;padding:20px;background:#eef3ff}
+.card{background:#fff;border-radius:18px;padding:16px;text-align:center;margin:8px;box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px}
+.bar{background:#a9bce8;color:#fff;padding:14px;text-align:center;border-radius:12px;font-weight:800;margin:15px 0}
+.box{background:#fff;padding:18px;border-radius:16px;margin:12px 0;line-height:1.6;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
+.photo{width:100%;height:300px;border-radius:16px;overflow:hidden;margin-top:14px;background:#fff}
+.photo img{width:100%;height:100%;object-fit:cover}
+.footer{margin-top:30px;background:#1c2a4e;color:#fff;padding:30px 20px;border-radius:24px 24px 0 0;text-align:center}
 </style>
 </head>
 <body>
-<div class="hero" id="hero">
-<p style="letter-spacing:5px;font-size:11px;opacity:.6;font-weight:700">FROM OUTGOING BATCH OF CLASS 12 • 2025-26</p>
-<h1 onclick="start()">Mahmud-Al<br>Hassan<br><span>Biosciences & Biochemistry | M.Sc. B.Ed
+
+<div id="hero">
+<p style="letter-spacing:4px;font-size:10px">FROM OUTGOING BATCH CLASS 12</p>
+<h1 onclick="goNext()">Mahmud-Al<br>Hassan<br><span style="font-size:11px;letter-spacing:3px;display:block;margin-top:10px;opacity:0.6">Biosciences & Biochemistry</span></h1>
+<p style="margin-top:15px">tap your name to begin</p>
+<button onclick="goNext()" style="margin-top:20px;padding:12px 28px;border-radius:999px;background:#1c2a4e;color:#fff;border:none;font-weight:bold">CLICK YOUR NAME, SIR ✨</button>
+</div>
+
+<div id="page2">
+<h2 style="text-align:center;font-size:30px">The Man Behind The Name</h2>
+<div class="grid">
+<div class="card">👋<br><b>Xenodochial</b></div>
+<div class="card">🧬<br><b>Biosciences</b></div>
+<div class="card">🎓<br><b>M.Sc. B.Ed</b></div>
+<div class="card">🏛️<br><b>JMI HNB GU KUK</b></div>
+</div>
+<div class="bar">Mahmud-Al Hassan Sir ✨</div>
+<div class="box"><b>A Letter From Us</b><br><br>We knew you as a teacher. But we will remember you as something more. You were Xenodochial before we knew the word. You taught Biosciences, but you taught us life. Thank you, Sir.<br><br><b>Outgoing Batch Class 12</b></div>
+<div class="box"><b>📚 1. KNOWLEDGE BEYOND BOOKS</b><br>You taught us to understand life, not just exams.</div>
+<div class="box"><b>⏰ 2. DISCIPLINE IS SUCCESS</b><br>If you respect time, time will respect you.</div>
+<div class="box"><b>💪 3. YOU BELIEVED IN US</b><br>Your "You can do it" gave us confidence.</div>
+
+<h3 style="text-align:center;margin-top:25px">Our Memories With You 📸</h3>
+<div class="photo"><img src="Screenshot_2026-09-03-20-55-45-88_1c337646f29875672b5a61192b9010f9.jpg"></div>
+<div class="photo"><img src="Screenshot_2026-09-03-20-55-37-56_1c337646f29875672b5a61192b9010f9.jpg"></div>
+<div class="photo"><img src="Screenshot_2026-09-03-20-55-29-95_1c337646f29875672b5a61192b9010f9.jpg"></div>
+
+<div class="footer">
+<h2>Forever Grateful To You, Sir 🙏</h2>
+<p>Happy Teacher's Day - 5th September 2025</p>
+<div style="margin-top:15px;background:rgba(255,255,255,0.15);padding:14px;border-radius:12px">
+🌟 This Site Is Created By 🌟<br>
+<b style="font-size:16px">SUHAIL TANWEER</b><br>
+Outgoing Batch • Class XII Science (2025-26)<br>
+ACACAS Hojai, Assam<br><br>
+<span style="font-size:11px;opacity:0.7">Designed with ❤️ for our beloved Sir</span>
+</div>
+</div>
+</div>
+
+<script>
+function goNext(){
+document.getElementById('hero').style.display='none';
+document.getElementById('page2').style.display='block';
+window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
