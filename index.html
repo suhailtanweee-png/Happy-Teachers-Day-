@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0,
+      maximum-scale=1.0, user-scalable=no">
+
+<meta name="theme-color" content="#07140d">
+
+<title>Sir Mahmud-Al-Hassan | Teacher's Day Tribute</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    overflow:hidden;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color:#fff;
+
+    background:#07140d;
+
+    transition:
+        background 1s ease,
+        color 1s ease;
+}
+
+
+/* =========================================================
+   PAGE SYSTEM
+========================================================= */
+
+#app{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.page{
+    position:absolute;
+    inset:0;
+
+    display:none;
+
+    overflow:hidden;
+
+    isolation:isolate;
+}
+
+.page.active{
+    display:block;
+}
+
+
+/* =========================================================
+   PAGE BACKGROUNDS
+========================================================= */
+
+.page::before{
+    content:"";
+
+    position:absolute;
+    inset:-20%;
+
+    z-index:-3;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(120,255,180,.16),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(0,210,150,.13),
+            transparent 30%
+        );
+
+    animation:
+        floatingBackground 12s ease-in-out infinite alternate;
+}
+
+.page::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    z-index:-2;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.025),
+            transparent 35%,
+            rgba(255,255,255,.02)
+        );
+}
+
+@keyframes floatingBackground{
+
+    0%{
+        transform:
+            translate3d(-2%, -2%, 0)
+            scale(1);
+    }
+
+    100%{
+        transform:
+            translate3d(2%, 2%, 0)
+            scale(1.08);
+    }
+}
+
+
+/* =========================================================
+   INDIVIDUAL PAGE THEMES
+========================================================= */
+
+.page1{
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(78,220,120,.20),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #061b10,
+            #0b3520 50%,
+            #04100a
+        );
+}
+
+.page2{
+    background:
+        radial-gradient(
+            circle at 80% 15%,
+            rgba(0,220,190,.20),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #04191a,
+            #07504b 50%,
+            #031010
+        );
+}
+
+.page3{
+    background:
+        radial-gradient(
+            circle at 25% 20%,
+            rgba(255,190,100,.16),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(255,110,160,.12),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #211509,
+            #432313 50%,
+            #110a05
+        );
+}
+
+.page4{
+    background:
+        radial-gradient(
+            circle at 70% 25%,
+            rgba(90,180,255,.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #071421,
+            #102f42 50%,
+            #030b12
+        );
+}
+
+.page5{
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(180,255,130,.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 50% 85%,
+            rgba(255,210,80,.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #101c0a,
+            #263c12 50%,
+            #080d04
+        );
+}
+
+
+/* =========================================================
+   SCROLL AREA
+========================================================= */
+
+.page-scroll{
+    width:100%;
+    height:100%;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    -webkit-overflow-scrolling:touch;
+
+    padding:
+        45px
+        20px
+        155px;
+
+    overscroll-behavior-x:none;
+    overscroll-behavior-y:auto;
+
+    scrollbar-width:thin;
+}
+
+.page-scroll::-webkit-scrollbar{
+    width:5px;
+}
+
+.page-scroll::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.22);
+    border-radius:20px;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+    width:min(1100px,100%);
+    margin:0 auto;
+}
+
+
+/* =========================================================
+   COMMON TEXT
+========================================================= */
+
+.eyebrow{
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.55);
+
+    margin-bottom:20px;
+}
+
+.title{
+    font-size:
+        clamp(52px,11vw,125px);
+
+    line-height:.86;
+
+    font-weight:900;
+
+    letter-spacing:-5px;
+}
+
+.subtitle{
+    margin-top:25px;
+
+    max-width:720px;
+
+    color:rgba(255,255,255,.68);
+
+    font-size:17px;
+
+    line-height:1.8;
+}
+
+.gradient-text{
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #a9e8bf,
+            #ffffff
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+
+/* =========================================================
+   GLASS CARD
+========================================================= */
+
+.card{
+    background:
+        rgba(255,255,255,.055);
+
+    border:
+        1px solid rgba(255,255,255,.13);
+
+    border-radius:28px;
+
+    padding:30px;
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.25);
+}
+
+
+/* =========================================================
+   PAGE 1
+========================================================= */
+
+.hero{
+    min-height:
+        calc(100vh - 200px);
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero-line{
+    width:90px;
+    height:2px;
+
+    margin:
+        30px 0;
+
+    background:
+        rgba(255,255,255,.8);
+}
+
+.hero-tags{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:30px;
+}
+
+.tag{
+    padding:
+        10px
+        15px;
+
+    border-radius:100px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    color:
+        rgba(255,255,255,.7);
+
+    font-size:10px;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   PAGE 2
+========================================================= */
+
+.two-column{
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(0,1fr);
+
+    gap:28px;
+
+    align-items:center;
+}
+
+.photo-box{
+    width:100%;
+}
+
+.photo-box img{
+    width:100%;
+    height:550px;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:30px;
+
+    border:
+        1px solid rgba(255,255,255,.14);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.35);
+}
+
+.info h2{
+    font-size:
+        clamp(42px,7vw,80px);
+
+    line-height:.9;
+
+    margin-bottom:25px;
+}
+
+.info p{
+    color:
+        rgba(255,255,255,.68);
+
+    line-height:1.85;
+
+    margin-bottom:18px;
+}
+
+.degree{
+    margin-top:25px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+}
+
+.degree span{
+    padding:
+        9px
+        12px;
+
+    border-radius:100px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    font-size:10px;
+
+    color:
+        rgba(255,255,255,.72);
+}
+
+
+/* =========================================================
+   PAGE 3
+========================================================= */
+
+.introduction{
+    display:grid;
+
+    grid-template-columns:
+        1.2fr
+        .8fr;
+
+    gap:25px;
+}
+
+.introduction h2{
+    font-size:
+        clamp(44px,8vw,90px);
+
+    line-height:.9;
+
+    margin-bottom:25px;
+}
+
+.introduction p{
+    color:
+        rgba(255,255,255,.68);
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+}
+
+.quote-card{
+    display:flex;
+
+    align-items:center;
+
+    min-height:330px;
+}
+
+.quote{
+    font-size:27px;
+
+    line-height:1.4;
+
+    font-weight:700;
+}
+
+.quote small{
+    display:block;
+
+    margin-top:25px;
+
+    color:
+        rgba(255,255,255,.45);
+
+    font-size:11px;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================================================
+   PAGE 4
+========================================================= */
+
+.gallery-title{
+    font-size:
+        clamp(44px,8vw,95px);
+
+    line-height:.88;
+
+    margin-bottom:35px;
+}
+
+.gallery{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+}
+
+.gallery-card{
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:470px;
+
+    border-radius:28px;
+
+    border:
+        1px solid rgba(255,255,255,.13);
+
+    background:
+        rgba(255,255,255,.04);
+}
+
+.gallery-card img{
+    width:100%;
+    height:100%;
+
+    min-height:470px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+        transform .7s ease;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.06);
+}
+
+.gallery-overlay{
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:25px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.9)
+        );
+}
+
+.gallery-overlay span{
+    font-size:10px;
+
+    color:
+        rgba(255,255,255,.55);
+
+    letter-spacing:3px;
+}
+
+.gallery-overlay h3{
+    margin-top:8px;
+
+    font-size:24px;
+}
+
+.gallery-overlay p{
+    margin-top:6px;
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:13px;
+}
+
+
+/* =========================================================
+   PAGE 5
+========================================================= */
+
+.final{
+    min-height:
+        calc(100vh - 200px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+}
+
+.final h2{
+    font-size:
+        clamp(48px,10vw,115px);
+
+    line-height:.85;
+
+    letter-spacing:-5px;
+}
+
+.final-text{
+    max-width:700px;
+
+    margin-top:25px;
+
+    color:
+        rgba(255,255,255,.68);
+
+    line-height:1.8;
+}
+
+.points{
+    width:min(850px,100%);
+
+    margin-top:40px;
+
+    display:grid;
+
+    gap:12px;
+
+    text-align:left;
+}
+
+.point{
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:19px 22px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.055);
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+.point:hover{
+    transform:translateX(6px);
+
+    background:
+        rgba(255,255,255,.09);
+}
+
+.point-number{
+    min-width:32px;
+
+    color:
+        rgba(255,255,255,.4);
+
+    font-size:11px;
+}
+
+.point-text{
+    font-size:15px;
+
+    font-weight:700;
+}
+
+.creator{
+    margin-top:45px;
+
+    padding:
+        14px
+        20px;
+
+    border-radius:100px;
+
+    border:
+        1px solid rgba(255,255,255,.13);
+
+    background:
+        rgba(255,255,255,.04);
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:11px;
+
+    letter-spacing:1px;
+}
+
+.creator strong{
+    color:#fff;
+}
+
+
+/* =========================================================
+   PAGE TRANSITION
+========================================================= */
+
+.page.active .animate{
+    animation:
+        pageEnter .7s ease both;
+}
+
+@keyframes pageEnter{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   FIXED BOTTOM NAVIGATION
+========================================================= */
+
+.bottom-nav{
+    position:fixed;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    z-index:999999;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:
+        10px
+        12px
+        calc(12px + env(safe-area-inset-bottom));
+
+    pointer-events:none;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.97) 0%,
+            rgba(0,0,0,.88) 55%,
+            transparent 100%
+        );
+}
+
+.nav-inner{
+    pointer-events:auto;
+
+    width:
+        min(480px,100%);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:7px;
+
+    padding:7px;
+
+    border-radius:100px;
+
+    background:
+        rgba(12,12,12,.88);
+
+    border:
+        1px solid rgba(255,255,255,.14);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,.45);
+}
+
+.nav-btn{
+    flex:1;
+
+    min-width:0;
+
+    height:42px;
+
+    padding:
+        0
+        10px;
+
+    border:none;
+
+    border-radius:100px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:.8px;
+
+    cursor:pointer;
+
+    transition:
+        .25s ease;
+}
+
+.nav-btn:hover,
+.nav-btn:active{
+    background:#fff;
+
+    color:#000;
+}
+
+.page-counter{
+    min-width:58px;
+
+    text-align:center;
+
+    color:
+        rgba(255,255,255,.45);
+
+    font-size:10px;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:800px){
+
+    .page-scroll{
+        padding:
+            70px
+            15px
+            165px;
+    }
+
+    .two-column,
+    .introduction{
+        grid-template-columns:1fr;
+    }
+
+    .photo-box img{
+        height:430px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-card{
+        min-height:430px;
+    }
+
+    .gallery-card img{
+        min-height:430px;
+    }
+
+    .hero{
+        min-height:
+            calc(100vh - 235px);
+    }
+
+    .final{
+        min-height:
+            calc(100vh - 235px);
+    }
+
+    .title{
+        letter-spacing:-3px;
+    }
+
+    .final h2{
+        letter-spacing:-3px;
+    }
+
+    .quote{
+        font-size:23px;
+    }
+
+    .card{
+        padding:23px;
+        border-radius:23px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media(max-width:390px){
+
+    .page-scroll{
+        padding-left:12px;
+        padding-right:12px;
+        padding-bottom:170px;
+    }
+
+    .bottom-nav{
+        padding-left:7px;
+        padding-right:7px;
+    }
+
+    .nav-inner{
+        gap:4px;
+        padding:5px;
+    }
+
+    .nav-btn{
+        height:40px;
+        font-size:9px;
+        padding:0 6px;
+    }
+
+    .page-counter{
+        min-width:45px;
+        font-size:9px;
+    }
+
+    .photo-box img{
+        height:370px;
+    }
+
+    .gallery-card,
+    .gallery-card img{
+        min-height:370px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="app">
+
+
+<!-- =======================================================
+     PAGE 1 — INTRO
+======================================================= -->
+
+<section class="page page1 active" id="page1">
+
+    <div class="page-scroll">
+
+        <div class="container hero">
+
+            <div class="hero-content animate">
+
+                <div class="eyebrow">
+                    01 / THE BEGINNING
+                </div>
+
+                <div class="title gradient-text">
+                    MAHMUD<br>
+                    AL-HASSAN
+                </div>
+
+                <div class="hero-line"></div>
+
+                <div class="eyebrow">
+                    BOTANY DEPARTMENT
+                </div>
+
+                <p class="subtitle">
+                    A tribute to a teacher whose knowledge,
+                    personality and presence make learning
+                    something students remember.
+                </p>
+
+                <div class="hero-tags">
+
+                    <div class="tag">
+                        🌿 BOTANY
+                    </div>
+
+                    <div class="tag">
+                        🔬 SCIENCE
+                    </div>
+
+                    <div class="tag">
+                        🎓 EDUCATOR
+                    </div>
+
+                    <div class="tag">
+                        ❤️ TEACHER'S DAY
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     PAGE 2 — PROFILE
+======================================================= -->
+
+<section class="page page2" id="page2">
+
+    <div class="page-scroll">
+
+        <div class="container">
+
+            <div class="eyebrow animate">
+                02 / THE TEACHER
+            </div>
+
+            <div class="two-column">
+
+                <div class="photo-box animate">
+
+                    <img
+                    src="WhatsApp Image 2026-09-03 at 11.47.25 AM.jpeg"
+                    alt="Sir Mahmud-Al-Hassan">
+
+                </div>
+
+
+                <div class="info animate">
+
+                    <h2>
+                        A MIND<br>
+                        THAT<br>
+                        GROWS.
+                    </h2>
+
+                    <p>
+                        Sir Mahmud-Al-Hassan,
+                        from the Botany Department,
+                        represents the beautiful combination
+                        of scientific knowledge and teaching.
+                    </p>
+
+                    <p>
+                        His academic journey reflects a
+                        strong foundation across science,
+                        education and higher studies.
+                    </p>
+
+                    <p>
+                        His studies and academic background
+                        include JMI, HNBGU and KUK.
+                    </p>
+
+                    <div class="degree">
+
+                        <span>
+                            XENOBIOLOGICAL
+                        </span>
+
+                        <span>
+                            BIOSCIENCE
+                        </span>
+
+                        <span>
+                            BIOCHEMISTRY
+                        </span>
+
+                        <span>
+                            M.Sc.
+                        </span>
+
+                        <span>
+                            B.Ed.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     PAGE 3 — PERSONALITY
+======================================================= -->
+
+<section class="page page3" id="page3">
+
+    <div class="page-scroll">
+
+        <div class="container">
+
+            <div class="eyebrow animate">
+                03 / BEYOND THE CLASSROOM
+            </div>
+
+            <div class="introduction">
+
+                <div class="animate">
+
+                    <h2>
+                        MORE THAN<br>
+                        A LESSON.
+                    </h2>
+
+                    <p>
+                        A great teacher doesn't only
+                        transfer information.
+                        A great teacher creates curiosity.
+                    </p>
+
+                    <p>
+                        Through science, observation and
+                        understanding of life, every lesson
+                        can become a reason to look at the
+                        world differently.
+                    </p>
+
+                    <p>
+                        That's the beauty of teaching —
+                        turning knowledge into something
+                        meaningful.
+                    </p>
+
+                </div>
+
+
+                <div class="card quote-card animate">
+
+                    <div>
+
+                        <div class="quote">
+                            “A teacher plants the seed
+                            of knowledge, then watches
+                            the student grow.”
+                        </div>
+
+                        <small>
+                            KNOWLEDGE • CURIOSITY • GROWTH
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     PAGE 4 — THREE PHOTOS
+======================================================= -->
+
+<section class="page page4" id="page4">
+
+    <div class="page-scroll">
+
+        <div class="container">
+
+            <div class="eyebrow animate">
+                04 / THE MOMENTS
+            </div>
+
+            <div class="gallery-title animate">
+                SCIENCE.<br>
+                STYLE.<br>
+                PRESENCE.
+            </div>
+
+
+            <div class="gallery">
+
+
+                <!-- PHOTO 1 -->
+
+                <div class="gallery-card animate">
+
+                    <img
+                    src="WhatsApp Image 2026-09-03 at 11.47.25 AM.jpeg"
+                    alt="Sir Mahmud-Al-Hassan">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            01 / KNOWLEDGE
+                        </span>
+
+                        <h3>
+                            The Educator
+                        </h3>
+
+                        <p>
+                            Knowledge with purpose.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTO 2 -->
+
+                <div class="gallery-card animate">
+
+                    <img
+                    src="WhatsApp Image 2026-09-03 at 11.47.28 AM.jpeg"
+                    alt="Sir Mahmud-Al-Hassan">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            02 / PRESENCE
+                        </span>
+
+                        <h3>
+                            The Personality
+                        </h3>
+
+                        <p>
+                            A presence students remember.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTO 3 -->
+
+                <div class="gallery-card animate">
+
+                    <img
+                    src="WhatsApp Image 2026-09-03 at 11.47.29 AM.jpeg"
+                    alt="Sir Mahmud-Al-Hassan">
+
+                    <div class="gallery-overlay">
+
+                        <span>
+                            03 / INSPIRATION
+                        </span>
+
+                        <h3>
+                            The Mentor
+                        </h3>
+
+                        <p>
+                            Inspiring curiosity and growth.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     PAGE 5 — FINAL TRIBUTE
+======================================================= -->
+
+<section class="page page5" id="page5">
+
+    <div class="page-scroll">
+
+        <div class="container final">
+
+            <div class="animate">
+
+                <div class="eyebrow">
+                    05 / FINAL TRIBUTE
+                </div>
+
+                <h2>
+                    THANK<br>
+                    YOU,<br>
+                    SIR.
+                </h2>
+
+                <p class="final-text">
+                    Thank you for sharing knowledge,
+                    encouraging curiosity and reminding
+                    students that learning is not just
+                    about answers — it is about discovering
+                    better questions.
+                </p>
+
+
+                <div class="points">
+
+                    <div class="point">
+
+                        <div class="point-number">
+                            01
+                        </div>
+
+                        <div class="point-text">
+                            🌱 Keep learning. Keep growing.
+                        </div>
+
+                    </div>
+
+
+                    <div class="point">
+
+                        <div class="point-number">
+                            02
+                        </div>
+
+                        <div class="point-text">
+                            🔬 Stay curious about the world.
+                        </div>
+
+                    </div>
+
+
+                    <div class="point">
+
+                        <div class="point-number">
+                            03
+                        </div>
+
+                        <div class="point-text">
+                            🧠 Knowledge becomes powerful when you apply it.
+                        </div>
+
+                    </div>
+
+
+                    <div class="point">
+
+                        <div class="point-number">
+                            04
+                        </div>
+
+                        <div class="point-text">
+                            🌿 Grow quietly. Let your work speak.
+                        </div>
+
+                    </div>
+
+
+                    <div class="point">
+
+                        <div class="point-number">
+                            05
+                        </div>
+
+                        <div class="point-text">
+                            ❤️ A good teacher leaves a lasting mark.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="creator">
+                    Created by
+                    <strong>SUHAIL TANWEER TAPADAR ❤️</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     FIXED NAVIGATION
+======================================================= -->
+
+<nav class="bottom-nav">
+
+    <div class="nav-inner">
+
+        <button
+            class="nav-btn"
+            id="homeBtn"
+            onclick="goHome()">
+            HOME
+        </button>
+
+        <button
+            class="nav-btn"
+            id="backBtn"
+            onclick="previousPage()">
+            BACK
+        </button>
+
+        <div
+            class="page-counter"
+            id="pageCounter">
+            01 / 05
+        </div>
+
+        <button
+            class="nav-btn"
+            id="nextBtn"
+            onclick="nextPage()">
+            NEXT
+        </button>
+
+    </div>
+
+</nav>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   PAGE NAVIGATION
+========================================================= */
+
+let currentPage = 1;
+
+const totalPages = 5;
+
+
+/* ---------------------------------------------------------
+   GET PAGE
+--------------------------------------------------------- */
+
+function getPage(number){
+
+    return document.getElementById(
+        "page" + number
+    );
+
+}
+
+
+/* ---------------------------------------------------------
+   SHOW PAGE
+--------------------------------------------------------- */
+
+function showPage(number){
+
+    /* Safety limit */
+
+    if(number < 1){
+        number = 1;
+    }
+
+    if(number > totalPages){
+        number = totalPages;
+    }
+
+
+    currentPage = number;
+
+
+    /* Remove active state */
+
+    document
+        .querySelectorAll(".page")
+        .forEach(function(page){
+
+            page.classList.remove("active");
+
+        });
+
+
+    /* Activate requested page */
+
+    const page =
+        getPage(currentPage);
+
+    page.classList.add("active");
+
+
+    /* Reset only the new page's scroll position */
+
+    const scrollArea =
+        page.querySelector(".page-scroll");
+
+    if(scrollArea){
+
+        scrollArea.scrollTop = 0;
+
+    }
+
+
+    /* Update counter */
+
+    document.getElementById(
+        "pageCounter"
+    ).textContent =
+        String(currentPage).padStart(2,"0")
+        + " / "
+        + String(totalPages).padStart(2,"0");
+
+
+    /* Update buttons */
+
+    updateNavigationButtons();
+
+}
+
+
+/* ---------------------------------------------------------
+   NEXT
+--------------------------------------------------------- */
+
+function nextPage(){
+
+    if(currentPage < totalPages){
+
+        showPage(
+            currentPage + 1
+        );
+
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   BACK
+--------------------------------------------------------- */
+
+function previousPage(){
+
+    if(currentPage > 1){
+
+        showPage(
+            currentPage - 1
+        );
+
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   HOME
+--------------------------------------------------------- */
+
+function goHome(){
+
+    showPage(1);
+
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTON STATE
+========================================================= */
+
+function updateNavigationButtons(){
+
+    const back =
+        document.getElementById("backBtn");
+
+    const next =
+        document.getElementById("nextBtn");
+
+
+    /* First page */
+
+    if(currentPage === 1){
+
+        back.style.opacity = "0.45";
+        back.style.pointerEvents = "none";
+
+    }else{
+
+        back.style.opacity = "1";
+        back.style.pointerEvents = "auto";
+
+    }
+
+
+    /* Last page */
+
+    if(currentPage === totalPages){
+
+        next.style.opacity = "0.45";
+        next.style.pointerEvents = "none";
+
+    }else{
+
+        next.style.opacity = "1";
+        next.style.pointerEvents = "auto";
+
+    }
+
+}
+
+
+/* =========================================================
+   KEYBOARD NAVIGATION
+   ONLY LEFT / RIGHT KEYS CHANGE PAGES.
+
+   NO TOUCH/SWIPE NAVIGATION.
+   Therefore vertical mobile scrolling remains normal.
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(event.key === "ArrowRight"){
+
+            nextPage();
+
+        }
+
+        if(event.key === "ArrowLeft"){
+
+            previousPage();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   IMPORTANT MOBILE BEHAVIOUR
+========================================================= */
+
+/*
+   There is intentionally NO touchstart,
+   touchmove or swipe-page code here.
+
+   This means:
+
+   Finger moving UP/DOWN
+          ↓
+   Normal page scrolling
+
+   Finger does NOT automatically
+   change to another page.
+
+   Pages change ONLY with:
+   HOME
+   BACK
+   NEXT
+*/
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+showPage(1);
+
+</script>
+
+</body>
+</html>
